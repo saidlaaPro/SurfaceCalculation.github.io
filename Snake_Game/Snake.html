@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The snake game en JS</title>
+		<meta charset="utf-8">
+		<style>
+			body{ background-color: rgb(95, 81, 75);}
+			canvas{
+				background-color : #333;
+				/* margin-left : 200px;
+				margin-top : 40px; */
+				border : #A55 solid 2px;
+			}
+			
+			.bt_container{
+				display: flex;
+				flex-direction:column;
+				justify-content : space-around;
+			}
+			.global_container{
+				display: flex;
+				width : 500px;
+				justify-content :space-between;
+			}
+			.spd{
+				display:flex;
+				justify-content: space-between;
+				flex-basis:50px;
+			}
+			#sdp_m{
+				order:1;
+				flex:1;
+			}
+			#inpt{
+				order:2;
+				flex:1;
+			}
+			#spd_p{
+				order:3;
+				flex:1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class='global_container'>
+			<div>
+				<canvas id='cnv1' width = '322' height = '514'><canvas>
+			</div>
+		</div>
+		<script src='coords_fruit.js'></script>
+		<script src='fct_right.js'></script>
+		<script src='fct_left.js'></script>
+		<script src='fct_up.js'></script>
+		<script src='fct_down.js'></script>
+		<script src='check_bitten.js'></script>
+		<script>
+		'use strict';
+			var canvas = document.getElementById('cnv1');
+			var contexte = canvas.getContext('2d');
+			var v=[2,34,66,98,130,162,194,226,258,290,322,354,386,418,450,482]; // possibles values for positionning.
+			var a = [v[3],v[4],v[5],v[6]];  // initial coordonnates of the the snawke components (x-coordonnate)
+			var b = [v[6],v[6],v[6],v[6]];  // initial coordonnates of the the snake components (y-coordonnate)
+			  
+			var fx,fy='';  // coordonnées du fruit;
+			var n1,n2,intersection;
+			
+			function draw_snake(){
+				contexte.fillStyle = 'red';
+				let i=0;
+				let l = a.length-1;
+				for (;i<l;i++){
+					contexte.fillRect(a[i],b[i],30,30);
+				}
+					contexte.fillStyle = '#A88';
+					contexte.fillRect(a[i],b[i],30,30);
+			}
+			
+			function draw_fruit(c1,c2){
+				contexte.fillStyle = 'green';
+			    contexte.fillRect(v[c1],v[c2],30,30);
+			}
+	
+			//Position initiale :
+			draw_snake();
+			coords_fruit();
+			
+			var start_off = setInterval(avance,100);
+
+			var clef ='';  // set the key.
+			document.onkeydown = function (e){
+			  clef = e.keyCode;
+			};
+			
+			function avance(){
+				switch (clef){
+					case 37: gauche();
+							
+							break;
+						 
+					case 38 : haut();
+				     					      
+							break;
+						  
+					case '': droite();
+					
+							break;
+					
+					case 39: droite();
+				         						 
+							break;
+						  
+					case 40: bas();
+				          
+							break;
+			    }
+			}
+			
+		</script>
+		
+	</body>
+</html>

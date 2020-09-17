@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>the Game of Rackets</title>
+        <meta charset='utf-8'>
+        <link rel='stylesheet' href='game_styles.css'>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='left_side'>
+                <button id='btn_start' class='buttons'>Start</button>
+                <button id='btn_pause' class='buttons'>Pause</button>
+                <div class='speed'>
+                    <label for='speed_options'>Change speed :</label> 
+                        <select id='list_d' name='speed_options'>
+                            <option value='1'> 1 </option>
+                            <option value='2'> 2 </option>
+                            <option value='3'> 3 </option>
+                            <option value='4'> 4 </option>
+                            <option value='5'> 5 </option>
+                        </select>
+                </div>
+            </div>
+            <div class='right_side'>
+                <canvas id='cnv1' width='600' height='300'></canvas>    
+            </div>
+            
+        </div>
+        <script src='bar_right.js'></script>
+        <script src='bar_left.js'></script>
+        <script src='move_ball.js'></script>
+        <script>
+            var canvas = document.getElementById('cnv1');
+            var contexte = canvas.getContext('2d');
+            var cnv_wdt = canvas.width;
+            var cnv_ht = canvas.height;
+            
+            var btn_start = document.getElementById('btn_start');
+            var btn_pause = document.getElementById('btn_pause');
+            
+            var ld = document.getElementById('list_d');
+            
+            var X_Range = [];
+            var pas_barre = 10;
+            var pas_ball = 5;
+            var ball_speed=50;
+            var ball_direction_h = 'right';
+            var ball_direction_v = 'down';
+            var pb = 22; //position of the bar
+            var xb=yb=10; // coordinates of the ball
+            
+            for (let i=0; i*pas_barre<451;i++){
+                X_Range[i] = pas_barre * i+5;
+            }
+            
+            function first_positions(){
+                // Draw the first position of the bar. In the middle of the canvas.
+                contexte.fillStyle = 'pink';
+                contexte.fillRect(X_Range[pb],280,150,15);
+            
+                // Draw the first position of the ball
+                contexte.arc(xb,yb,10,0,2*Math.PI);
+                contexte.fill();    
+            }
+            
+            first_positions();
+            
+            var start_off;
+            
+            
+            function start_game(){
+                xb=yb=10;
+                pb=22;
+                contexte.clearRect(0,0,cnv_wdt,cnv_ht);
+                contexte.beginPath();
+                first_positions();
+                btn_pause.disabled=false;
+                btn_start.disabled=true;
+                start_off = setInterval(move_ball,ball_speed);
+            }
+            
+            function pause_game(){
+                if (btn_pause.innerHTML=='Pause'){
+                    clearInterval(start_off);
+                    btn_pause.innerHTML='Resume';
+                }else{
+                    start_off = setInterval(move_ball,ball_speed);
+                    btn_pause.innerHTML='Pause';
+                }
+                
+            }
+            
+            function change_speed(){
+                ball_speed = 100/(2*ld.options[ld.selectedIndex].value);
+                clearInterval(start_off);
+                start_off = setInterval(move_ball,ball_speed);
+            }
+            
+            //Launch the game once the button 'start' clicked
+            btn_start.addEventListener('click',start_game);
+            btn_pause.addEventListener('click',pause_game);
+            ld.addEventListener('change', change_speed);
+            var slide='';
+            
+			document.onkeydown = function (e){
+			  clef = e.keyCode;
+              switch (clef){
+					case 37:
+                        clearInterval(slide);
+                        slide = setInterval(left,20);
+                    break;
+					
+					case 39:
+                        clearInterval(slide);
+                        slide = setInterval(right,20);
+                    break;
+			    }
+			};
+            document.onkeyup = function (){
+			  clearInterval(slide);
+			};
+            
+            
+        </script>
+    </body>
+</html>

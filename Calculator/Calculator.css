@@ -1,0 +1,83 @@
+body{
+    background-color: #222;
+    color: white;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 470px;
+}
+
+.keyboard_wrapper{
+    margin-top:30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap : 20px 20px;
+}
+.err_msg{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.keyboard_wrapper > div{
+    background-color: #323232;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    border: 1px solid #3f3f3f;
+    transition : 0.5s;
+    line-height: 50px;
+    filter: brightness(100%);
+}
+.keyboard_wrapper > .clear{
+    color: orange;
+}
+.keyboard_wrapper > .equal{
+    background-color: rgb(20, 177, 20);
+    color: white;
+}
+.keyboard_wrapper > .operator, .math_operator{
+    color: rgb(62, 238, 62);
+}
+/* Animation for the buttons */
+.keyboard_wrapper > div:hover{
+    filter:brightness(150%);
+}
+/* Styles for the screen */
+.screen_wrapper{
+    background-color: #353535;
+    height: 150px;
+    border-radius: 15px;
+    font-size: 35px;
+    position: relative;
+}
+.screen_wrapper > .math_expression{
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+/* Style for Division Symbol */
+#division_op{
+    font-family: 'Times New Roman', Times, serif;
+    font-size : 40px;
+    font-weight: 500;
+}
+/* Style for the Cursor  */
+.screen_wrapper > .math_expression .cursor{
+    width: 2px;
+    height: 35px;
+    background-color: #999;
+}
+/* styles for the Final Result */
+.result{
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    color:#888;
+    transition: bottom 0.4s , left 0.4s ;
+}
+
