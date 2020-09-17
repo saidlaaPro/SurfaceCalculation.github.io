@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>About Me</title>
+        <link rel='stylesheet' href='styles.css'>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='nav_wrapper'>
+                <div class='left_side'>
+                    <div class='nav_link_wrapper'>
+                        <a href='index.html'>Home</a>    
+                    </div>
+                    <div class='nav_link_wrapper active_state_wrapper'>
+                        <a class='active_state_link' href='about.html'>About Me</a>    
+                    </div>      
+                </div>
+                <div class='middle_side'>Languages: 
+                    <div class ='english'>
+                        <img src='images/EN.png'>
+                        <strong>EN</strong>
+                    </div>
+                    <div class='french'>
+                        <img src='images/FR.png'>
+                        <strong>FR</strong>
+                    </div> 
+                </div>
+                <div class='right_side'>
+                    <div style='font-size: larger;'>Said Laarab</div>    
+                </div>
+            </div>
+
+            <div class='global_title EN'>About Me</div>
+            <div class='global_title FR'>A propos de moi</div>
+            
+            <div class='content_wrapper'>
+                <div class='profile_content'>
+                    <div class='profile_img'>
+                        <img src='images/profile_image.JPG'>
+                    </div>  
+                    <div class='profile_text EN'>
+                        I am Said Laarab, a versatile engineer graduated from the ENSMR (ex: ENIM) Engineering School. 
+                        I have been passionate about computer sciences since my childhood, especially when I studied programming. 
+                        Since then, whenever I have a task, or there is a simple game, that can be done by code, I don't hesitate to program it. However, 
+                        my curiosity to discover how it is like to work in the industrial companies lead me to occupy the position of Quality Enginner
+                        for some time. This experience has made me realize it is much better to work on what I really like so I can do my best regardless of the tough conditions 
+                        which pop up every now and then. That is why, I have decided to switch over my carrer to Software Engineering where I believe I can do brilliant work.
+                        To realize this objectif, I have started learning on my own the major web development languanges : HTML 5, CSS 3 and Javascript. By the time I got familiar with  
+                        those technologies, I have started putting them into practice and sharpen my skills by building applications, which you can check in my portfolio. The last one,  
+                        is my favourite one, as It leads me to learn a lot of new techniques due its complexity. I have built it to participate in a Software Engineering Contest organized by an American Start-up "AlgoExpert.io" recently. 
+                        For now, I am learning the famous library of Javascript, React.js. to widen my skill set as a future Web Development Engineer.                  
+                    </div>
+                    <div class='profile_text FR'>
+                        Je m'appelle Said Laarab, je suis un Ingénieur d'Etat polyvalent de l'Ecole Nationale Supérieure des Mines de Rabat - ENSMR (ex: ENIM). 
+                        Je suis un passionné de l'informatique depuis mon enfance, surtout lorsque j'ai étudié la programmation. 
+                        Depuis, je ne rate pas l'occasion de programmer une tâche ou un simple jeu, si c'est possible. Or, 
+                        ma curiosité à découvrir le monde indutriel m'a poussé à occuper le poste d'ingénieur qualité dans une société industrielle. Cette experience m'a permis de réaliser que pour faire de mon mieux, 
+                        même sous des conditions contraignantes, il est indispensable de faire ce que j'aime le plus. C'est ainsi que j'ai décidé de changer ma carrière vers le domaine du Développement Informatique 
+                        où je suis sûre je peux réaliser des projets agréables. Pour concrétiser mon objectif, j'ai commencé à m'auto-former sur les languages du Développement Web : HTML 5, CSS 3 and Javascript. 
+                        Après m'avoir familiarisé avec ces technologies, j'ai commencé à les mettre en pratiques et renforcer mes compétences en développant des applications et réalisant des sites web, comme vous pouvez 
+                        le constater à travers mon portfolio. La dernière application que j'ai developpée, et celle que j'appréciais le plus, car elle m'a permis d'apprendre énormément de techniques vu sa complexité. 
+                        Je l'ai developpé récemment à l'occasion d'une compétition entre Ingénieurs Développeur organisée par une start-up américaine "AlgoExpert.io". 
+                        Actuellement, je suis en train d'apprendre "React.js", la célèbre bibliothèque dédiée à Javascript, pour ainsi renforcer mes compétences en tant que futur Ingénieur Développeur Web.                  
+                    </div>
+                </div>
+
+                <div class='Contact_Me'>
+                    <div class='Contact_item'>
+                        <div class='logo'><img src='images/logos/mail_icon.png'></div>
+                        <div><a href="mailto:laarabsaid@gmail.com">laarabsaid@gmail.com</a></div>
+                    </div>
+                    <div class='Contact_item'>
+                        <div class='logo'><img src='images/logos/mail_icon.png'></div>
+                        <div><a href="mailto:s.laarab@enim.ac.ma">s.laarab@enim.ac.ma</a></div>
+                    </div>
+                    <div class='Contact_item'>
+                        <div class='logo'><img src='images/logos/phone_icon.png'></div>
+                        <div>06 18 31 14 08</div>
+                    </div>
+                    <div class='Contact_item'>
+                        <div class='logo'><img src='images/logos/fb_icon.png'></div>
+                        <div><a href="https://web.facebook.com/said.laa.9" target="_blank">https://www.facebook.com/said.laarab</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        const portfolio_items = document.querySelectorAll('.portfolio_item_wrapper');
+        
+        /* portfolio_items[0].childNodes[1].classList.add('new_class'); to add a new class to the item */
+        
+        portfolio_items.forEach(portfolio_item => {
+            portfolio_item.addEventListener('mouseover', () => {
+              portfolio_item.childNodes[1].classList.remove('img_brighten');
+              portfolio_item.childNodes[1].classList.add('img_darken');
+            });
+            
+            portfolio_item.addEventListener('mouseout', () => {
+              portfolio_item.childNodes[1].classList.remove('img_darken');
+              portfolio_item.childNodes[1].classList.add('img_brighten');
+            });    
+        });
+        /* Switch between languages: */
+        const english_option = document.querySelector('.english');
+        const french_option = document.querySelector('.french');
+        const english_items = document.querySelectorAll('.EN');
+        const french_items = document.querySelectorAll('.FR');
+
+        /* set by default the language to english*/
+        english_option.style.color = 'orange';
+        english_items.forEach(item => item.style.display = 'block');
+        french_items.forEach( item => item.style.display = 'none');
+        /* set based on choice */
+        english_option.addEventListener('click', ()=>{
+            english_option.style.color = 'orange';
+            french_option.style.color = 'white';
+            english_items.forEach(item => item.style.display = 'block');
+            french_items.forEach( item => item.style.display = 'none');
+        });
+
+        french_option.addEventListener('click', ()=>{
+            french_option.style.color = 'orange';
+            english_option.style.color = 'white';
+            french_items.forEach(item  => item.style.display = 'block');
+            english_items.forEach(item => item.style.display = 'none');
+        });
+    </script>
+</html>
