@@ -205,7 +205,6 @@
         const portfolio_items = document.querySelectorAll('.portfolio_item_wrapper');
         const project_logos = document.querySelectorAll('.logo_wrapper');
         /* portfolio_items[0].childNodes[1].classList.add('new_class'); to add a new class to the item */
-        console.log(portfolio_items[0].childNodes[3].childNodes[1].childNodes[1]);
         portfolio_items.forEach(portfolio_item => {
             portfolio_item.addEventListener('mouseover', () => {
               portfolio_item.childNodes[1].classList.remove('img_brighten');
