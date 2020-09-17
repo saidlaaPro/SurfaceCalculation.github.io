@@ -1,4 +1,4 @@
-# VisualizationProject_Surface_Calculation
+# Surface Calculation
 This project is about an application that allows the user to draw a simple or complexe shape, either by using the mouse or entering the coordinates of the dots making the shape. Then, it calculate the surface.
 The calculation process : 
 1- define the smallest rectangle that surround the shape, using the further dots of the shape : upwards, downwrads, to left and to the right.
