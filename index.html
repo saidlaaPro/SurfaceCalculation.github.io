@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Visualization Project 2020</title>
+        <link rel='stylesheet' href='SurfaceCalculation.css'></link>
+    </head>
+
+    <body>
+        <div class='nav_bar'>
+            <div class='coordinates'>
+                <label for='x_coord'>X</label>
+                <input type='text' name='x_coord'>
+                <label for='y_coord'>Y</label>
+                <input type='text' name='y_coord'>
+                <button class='draw_button'>Draw Dot</button>
+            </div>
+            <div class='result'>
+                <label for='calc_result'>Surface = </label>
+                <input type='text' name='calc_result'>
+                <button class='get_surface_button'>Get Surface</button>
+            </div>
+        </div>
+        <div class='drawing_space'>
+            <canvas width='800' height='500'></canvas>
+            <div class='calculation_area'>
+                <div class="calculation_area_title">External Surface</div>
+                <div class ='formula'></div>
+            </div>
+        </div>
+        <script src='SurfaceCalculation.js'></script>
+    </body>
+</html>
