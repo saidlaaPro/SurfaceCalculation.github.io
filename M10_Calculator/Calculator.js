@@ -97,8 +97,8 @@ function write(){
             
                if(['+','–'].indexOf(last_sign)!= -1){
                   switch(segment_sign){
-                     case '+': last_result += current_segment;        break;
-                     case '–': last_result += (-1) * current_segment; break; 
+                     case '+': last_result += Math.abs(current_segment);        break;
+                     case '–': last_result += (-1) * Math.abs(current_segment); break; 
                   }
                   current_segment = parseInt(num.innerHTML);
                   segment_sign = last_sign;
@@ -148,8 +148,8 @@ function write(){
    // Show the math result in the screen when we have a complete math expression. (a + b) or (a x b)
    if ( text_elements.length > 2 ){
       switch(segment_sign){
-         case '+': screen_result.innerHTML = last_result + current_segment; break;
-         case '–': screen_result.innerHTML = last_result - current_segment; break;
+         case '+': screen_result.innerHTML = last_result + Math.abs(current_segment); break;
+         case '–': screen_result.innerHTML = last_result - Math.abs(current_segment); break;
       }
    }
 }
@@ -211,7 +211,7 @@ function show_result(){
    //remove all the HTML elements from the math_expression in the screen
    for(let i=1; i< text_elements.length;i++){
       math_expression.removeChild(text_elements[i--]); // (--) this is for keeping the index i = 1;
-      text_elements.splice(1,1); // supprimer un élément (2nd argument) à partir de l'indice 1 (1st argument);
+      text_elements.splice(1,1); // delete an element (2nd argument) from the index 1 (1st argument);
    }
 
    text_zone.style.color = '#353535';
@@ -223,5 +223,14 @@ function show_result(){
    console.log(screen_result.clientWidth);
    let wdt = screen_wrapper.clientWidth - 2 - screen_result.clientWidth;
    screen_result.style.left = wdt+'px';
+   // clear the variables used for calculation :
+   last_result = 0;
+   sub_segment = 0;
+   current_segment = parseInt(screen_result.innerHTML);
+   if(current_segment<0){
+      segment_sign = '–';
+   }else{
+      segment_sign = '+';
+   }
 }
 equal.addEventListener('click',show_result);
