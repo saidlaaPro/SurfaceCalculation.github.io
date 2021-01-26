@@ -12,10 +12,12 @@
 	<artifactId>business-logic-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>business-logic-server</name>
+	<packaging>war</packaging>
 	<description>Project for Handling a list of items</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -81,6 +83,13 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

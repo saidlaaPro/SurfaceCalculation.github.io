@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.client.RestTemplate;
@@ -19,6 +20,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import java.util.Arrays;
 
 @Configuration
+@EnableWebSecurity
 public class ProjectConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public RestTemplate restTemplate(){
