@@ -186,26 +186,7 @@
   flex-direction: row;
   align-items: center; */
 }
-.H_square {
-  width: 10px;
-  height: 10px;
-  background-color: brown;
-  margin-right: 10px;
-}
-.C_square {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(40, 40, 184);
-  margin-left: 20px;
-  margin-right: 10px;
-}
-.J_square {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(81, 205, 50);
-  margin-left: 20px;
-  margin-right: 10px;
-}
+
 .skill_img {
   background-size: 100% 100%;
   background-position: center;
