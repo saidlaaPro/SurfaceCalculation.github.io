@@ -1,261 +1,312 @@
 /* Container Style */
-.body{
-    margin: 0px;
+.body {
+  margin: 0px;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr; /* so all the container's children stack one over the another in one column*/
-    background-image:url(images/dark_desktop.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* so all the container's children stack one over the another in one column*/
+  background-image: url(images/dark_desktop.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /* Navigation Bar Styles */
-.middle_side{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.middle_side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.english, .french{
-    cursor: pointer;  /* change the cursor into a hand pointer when hovering over the items */
-    margin-left: 10px;
+.english,
+.french {
+  cursor: pointer; /* change the cursor into a hand pointer when hovering over the items */
+  margin-left: 10px;
 }
-.middle_side > div > img{
-    border-radius: 5px;
-    width: 20px;
+.middle_side > div > img {
+  border-radius: 5px;
+  width: 20px;
 }
-.english:hover, .french:hover{
-    color: lightblue !important;
+.english:hover,
+.french:hover {
+  color: lightblue !important;
 }
-.global_title{
-    background-color: rgba(76, 131, 233, 0.527);
-    color: white;
-    margin-left: 2.5%;
-    margin-bottom: 20px;
-    width: 84.32%;
-    border-radius: 3px;
-    
-    justify-self: center;
-    text-align: center;
-    height: 50px; 
-    line-height: 50px;
-    font-size: xx-large;
+.global_title {
+  background-color: rgba(76, 131, 233, 0.527);
+  color: white;
+  margin-left: 2.5%;
+  margin-bottom: 20px;
+  width: 84.32%;
+  border-radius: 3px;
+
+  justify-self: center;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: xx-large;
 }
-.nav_wrapper{
-    color: white;
-    display:flex;
-    justify-content: space-between;
-    padding: 38px;
+.nav_wrapper {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 38px;
 }
-.left_side{
-    display: flex;
-    color: white;
+.left_side {
+  display: flex;
+  color: white;
 }
 .nav_wrapper > .left_side > div {
-    margin-right: 20px;
-    text-transform: uppercase;
-    font-size: 0.9em; 
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
-.nav_link_wrapper{
-    height: 22px;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s;    /* add a transition to the specified property, whenever it should change temporarily (ex: in the occasion of a hover)  */
+.nav_link_wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s; /* add a transition to the specified property, whenever it should change temporarily (ex: in the occasion of a hover)  */
 }
-.nav_link_wrapper a{
-    /*color: #8a8a8a;*/
-    color: white;
-    text-decoration: none;
-    transition: color 0.5s;
+.nav_link_wrapper a {
+  /*color: #8a8a8a;*/
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
 }
-.nav_link_wrapper:hover{
-    border-bottom: 1px solid lightblue;
+.nav_link_wrapper:hover {
+  border-bottom: 1px solid lightblue;
 }
-.nav_link_wrapper a:hover{
-    color: lightblue;
+.nav_link_wrapper a:hover {
+  color: lightblue;
 }
 /* Portfolio Styles */
-.portfolio_items_wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.portfolio_items_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.portfolio_item_wrapper{
-    margin-bottom: 20px;
-    position: relative;  /* this set-up make the absolutely positioned child elements get above the parent element */
-    display: flex;
-    justify-content: center;
+.portfolio_item_wrapper {
+  margin-bottom: 20px;
+  position: relative; /* this set-up make the absolutely positioned child elements get above the parent element */
+  display: flex;
+  justify-content: center;
 }
-.portfolio_img_background{
-    height: 280px;
-    width : 40%;
+.portfolio_img_background {
+  height: 280px;
+  width: 40%;
 
-    border: 2px solid #aaa;
-    border-radius: 5px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
 
-    /*background-size: cover; /* cover the entire space dedicated to the div : minimize it if it's necessary */
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+  /*background-size: cover; /* cover the entire space dedicated to the div : minimize it if it's necessary */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.img_text_wrapper{
-    position: absolute;
-    top: 0;
-    left: 9.10%; /* we have taken into account the padding added to the details' div (10*2/1313)=1.52% */
-    width: 40%;
+.img_text_wrapper {
+  position: absolute;
+  top: 0;
+  left: 4.5%; /* we have taken into account the padding added to the details' div (10*2/1313)=1.52% */
+  width: 40%;
 
-    border: gray;
+  border: gray;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
 }
-.logo_wrapper img{
-    width : 50%;
-    margin-bottom: 20px;
-    opacity: 0;
-    transition: opacity 0.75s ease-in-out;
+.logo_wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
 }
-.portfolio_item_details{
-    background-color: rgba(255, 255, 255, 0.70);
-    position: relative;
-    padding: 0.76%;
-    left: 2.5%;
-    width: 40%;
-    border: 2px solid #aaa;
-    border-radius: 5px;
+.portfolio_item_details {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding: 0.76%;
+  left: 2.5%;
+  width: 50%;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.portfolio_item_details > .details_title{
-    color: royalblue;
+.portfolio_item_details > .details_title {
+  color: royalblue;
 }
-.portfolio_item_details > .details{
-    color: #444;
+.skills_title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: darkblue;
+}
+.portfolio_item_details > .details {
+  color: #444;
 }
 /* Adding animation to the items */
-.portfolio_item_wrapper .subtitles > div > a{
-    font-weight: 600;
-    color: transparent;
-    text-decoration: none;
-    transition: 1s;
+.portfolio_item_wrapper .subtitles > div > a {
+  font-weight: 600;
+  color: transparent;
+  text-decoration: none;
+  transition: 1s;
 }
-.portfolio_item_wrapper:hover .subtitles > div > a{
-    font-weight: 600;
-    color: lightseagreen;
+.portfolio_item_wrapper:hover .subtitles > div > a {
+  font-weight: 600;
+  color: lightseagreen;
 }
-.subtitles > div > a:hover{
-    color: orangered !important;
+.subtitles > div > a:hover {
+  color: orangered !important;
 }
 /* adding a filter */
-.img_darken{
-    filter: brightness(20%);
-    transition: 1s;
+.img_darken {
+  filter: brightness(20%);
+  transition: 1s;
 }
-.img_brighten{
-    transition: 1s;
-    filter: brightness(100%);
+.img_brighten {
+  transition: 1s;
+  filter: brightness(100%);
 }
 /* active state style (HOME, ABOUT) */
-.active_state_link{
-    color: lightblue !important;
+.active_state_link {
+  color: lightblue !important;
 }
-.active_state_wrapper{
-    border-bottom: 1px solid lightblue ;
+.active_state_wrapper {
+  border-bottom: 1px solid lightblue;
 }
 
-/*   */
-.portfolio_item_details > .skills_wrapper{
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
+.skills_section {
+  display: flex;
+  flex-direction: column;
 }
-.H_square{
-    width: 10px;
-    height: 10px;
-    background-color: brown;
-    margin-right: 10px;
+
+.skills_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+  /* display: flex !important;
+  flex-direction: row;
+  align-items: center; */
 }
-.C_square{
-    width: 10px;
-    height: 10px;
-    background-color: rgb(40, 40, 184);
-    margin-left: 20px;
-    margin-right: 10px;
+.H_square {
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+  margin-right: 10px;
 }
-.J_square{
-    width: 10px;
-    height: 10px;
-    background-color: rgb(81, 205, 50);
-    margin-left: 20px;
-    margin-right: 10px;
+.C_square {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(40, 40, 184);
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.J_square {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(81, 205, 50);
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.skill_img {
+  background-size: 100% 100%;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+
+  margin: 10px;
+}
+.react_icon {
+  background-image: url(images/skills_icons/reactjs.png);
+}
+.material_ui_icon {
+  background-image: url(images/skills_icons/material-ui.png);
+}
+.spring_boot_icon {
+  background-image: url(images/skills_icons/spring_boot_icon.png);
+}
+.spring_security_icon {
+  background-image: url(images/skills_icons/spring_security_icon.png);
+}
+.jwt_icon {
+  background-image: url(images/skills_icons/jwt.jpg);
+}
+.java_icon {
+  background-image: url(images/skills_icons/java.png);
+}
+.html_icon {
+  background-image: url(images/skills_icons/html5.png);
+}
+.css_icon {
+  background-image: url(images/skills_icons/css3.png);
+}
+.javascript_icon {
+  background-image: url(images/skills_icons/javascript.png);
 }
 /* About Me - Styles */
-.content_wrapper{
-    background-color: rgba(255,255,255,0.38);
-    justify-self: center;
+.content_wrapper {
+  background-color: rgba(255, 255, 255, 0.38);
+  justify-self: center;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 84.32%;
-    padding-top: 20px;
-    margin-left: 2.5%;
-    border-radius: 5px;
-    min-height: 450px;
+  width: 84.32%;
+  padding-top: 20px;
+  margin-left: 2.5%;
+  border-radius: 5px;
+  min-height: 450px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-.profile_content{
-    display: flex;
-    flex-direction: row;
+.profile_content {
+  display: flex;
+  flex-direction: row;
 }
-.profile_img > img{
-    width: 220px;
-    margin: 20px;
+.profile_img > img {
+  width: 220px;
+  margin: 20px;
 
-    border: 2px solid rgba(90, 89, 89,0.4);
-    border-radius: 15px;
+  border: 2px solid rgba(90, 89, 89, 0.4);
+  border-radius: 15px;
 }
-.profile_text{
-    color:white;
-    font-size: larger;
+.profile_text {
+  color: white;
+  font-size: larger;
 
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.65);
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.65);
 
-    border: 2px solid rgba(90, 89, 89,0.4);
-    border-radius: 5px;
+  border: 2px solid rgba(90, 89, 89, 0.4);
+  border-radius: 5px;
 }
 /* Contact Section */
-.Contact_Me{
-    color: white;
-    font-size: larger;
-    background-color: rgba(0, 0, 0, 0.65);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
+.Contact_Me {
+  color: white;
+  font-size: larger;
+  background-color: rgba(0, 0, 0, 0.65);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
 }
-.Contact_item{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+.Contact_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-.Contact_item > .logo{
-    margin-right: 20px;
+.Contact_item > .logo {
+  margin-right: 20px;
 }
-.Contact_item > .logo > img{
-    width: 40px;
+.Contact_item > .logo > img {
+  width: 40px;
 }
-.Contact_item > div > a{
-    color: white;
-    text-decoration: none;
+.Contact_item > div > a {
+  color: white;
+  text-decoration: none;
 }
-.Contact_item > div > a:hover{
-    color: orange;
+.Contact_item > div > a:hover {
+  color: orange;
 }
