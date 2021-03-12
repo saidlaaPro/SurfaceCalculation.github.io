@@ -198,6 +198,18 @@
 .react_icon {
   background-image: url(images/skills_icons/reactjs.png);
 }
+.angular_icon {
+  background-image: url(images/skills_icons/angular.png);
+}
+.bootstrap_icon {
+  background-image: url(images/skills_icons/bootstrap.png);
+}
+.typescript_icon {
+  background-image: url(images/skills_icons/typescript.png);
+}
+.firebase_icon {
+  background-image: url(images/skills_icons/firebase.png);
+}
 .material_ui_icon {
   background-image: url(images/skills_icons/material-ui.png);
 }
